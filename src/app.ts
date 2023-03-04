@@ -92,7 +92,11 @@ interface Resource<T> {
 }
 
 enum ResourceType {
-  BOOK, AUTHOR, FILM, DIRECTOR, PERSON
+  BOOK,
+  AUTHOR,
+  FILM,
+  DIRECTOR,
+  PERSON,
 }
 
 const docFour: Resource<string> = {
@@ -103,6 +107,8 @@ const docFour: Resource<string> = {
 
 const docFive: Resource<object[]> = {
   uid: 1,
-  ResourceType.FILM
+  resourceType: ResourceType.FILM,
   data: [{ name: "Star Wars" }, { director: "George Lucas" }],
 };
+
+console.log(docFour, docFive);

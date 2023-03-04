@@ -58,6 +58,7 @@ const docFour = {
 };
 const docFive = {
     uid: 1,
-    ResourceType, : .FILM,
+    resourceType: ResourceType.FILM,
     data: [{ name: "Star Wars" }, { director: "George Lucas" }],
 };
+console.log(docFour, docFive);
