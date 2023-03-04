@@ -62,3 +62,11 @@ const docFive = {
     data: [{ name: "Star Wars" }, { director: "George Lucas" }],
 };
 console.log(docFour, docFive);
+// tuples
+// With regular arrays, you can change the type of an index, as long as that type is permitted in the array
+let arr = ["snail", 4, true];
+arr[0] = false; // Works fine
+// With tuples, you can define the accepted type for each index
+let tup = ["snail", 4, true];
+// tup[0] = false --> Throws an error, because you can't redefine the type of tup[]
+tup[0] = "horse"; // works fine, since it's still a string
