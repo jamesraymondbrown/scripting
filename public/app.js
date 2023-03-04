@@ -41,5 +41,15 @@ const addUID = (obj) => {
     let uid = Math.floor(Math.random() * 100);
     return Object.assign(Object.assign({}, obj), { uid });
 };
-let docOne = addUID({ name: "Yoshi", age: 40 });
+const docOne = addUID({ name: "Yoshi", age: 40 });
 console.log(docOne.name);
+const docTwo = {
+    uid: 1,
+    resourceName: "person",
+    data: "James",
+};
+const docThree = {
+    uid: 1,
+    resourceName: "person",
+    data: [{ name: "James" }, { name: "Joe" }],
+};

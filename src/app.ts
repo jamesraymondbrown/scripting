@@ -60,7 +60,7 @@ const addUID = <T extends { name: string }>(obj: T) => {
   return { ...obj, uid };
 };
 
-let docOne = addUID({ name: "Yoshi", age: 40 });
+const docOne = addUID({ name: "Yoshi", age: 40 });
 
 console.log(docOne.name);
 
@@ -70,3 +70,15 @@ interface Resource<T> {
   resourceName: string;
   data: T;
 }
+
+const docTwo: Resource<string> = {
+  uid: 1,
+  resourceName: "person",
+  data: "James",
+};
+
+const docThree: Resource<object[]> = {
+  uid: 1,
+  resourceName: "person",
+  data: [{ name: "James" }, { name: "Joe" }],
+};
