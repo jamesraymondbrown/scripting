@@ -1,6 +1,23 @@
 "use strict";
-const anchor = document.querySelector("a");
-console.log(anchor.href);
+// classes
+class Invoice {
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
+    }
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`;
+    }
+}
+const invOne = new Invoice("Joe", "grass cutting", 50);
+const invTwo = new Invoice("Jim", "grass growing", 300);
+let invoices = [];
+invoices.push(invOne, invTwo);
+invoices.forEach((inv) => {
+    console.log(inv.format());
+});
+// inputs
 const form = document.querySelector(".new-item-form");
 const type = document.querySelector("#type");
 const toFrom = document.querySelector("#tofrom");
